@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<nav class="navbar bg-light">
+  <div class="container-fluid ph-navbar">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2 search" style="border-radius: 100vmax;" type="search" placeholder="Type your medicine name" aria-label="Search">
+      <button class="btn btn-outline-success ph-search-btn" style="border-radius: 100vmax;" type="submit">Search</button>
+    </form>
+    <button class="btn btn-outline-success ph-logout-btn" style="border-radius: 100vmax;" type="submit">Logout</button>
+  </div>
+</nav>
+
+
+<h1>Pharmacy List</h1>
+    <div>
+        <button class="button">Open</button>
+        <button class="button">On-call</button>
+        <i class="fa-regular fa-filter-list"></i>
+    </div>
+<div class="container-pm">
+<div>
+ <% @pharmacies.each do |pharmacy| %>
+  <div class="card-product">
+   <div class="card-product-infos">
+    <h2> <%= pharmacy.name %></h2>
+    <p> <%= pharmacy.address %> </p>
+    <div class="d-grid gap-2">
+     <button class="btn btn-success phone" id="phone" type="button"> 
+     <i class="fa-solid fa-phone phone-icon"></i>
+      <%= pharmacy.phone_number%>
+     </button>
+     </div>
+   </div>
+  </div>
+ <% end%>
+ <div style="width:40%; height: 600px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+ </div>
+ </div>
