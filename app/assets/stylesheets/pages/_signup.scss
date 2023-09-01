@@ -1,9 +1,9 @@
-.login-container {
+.signup-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* This makes sure the container takes up the full viewport height */
-  background-image: url(blurry-bg.jpg); /* White background for the page */
+  min-height: 100vh;
+  background-image: url(blurry-bg.jpg);
   background-size: cover;
 }
 
@@ -13,19 +13,46 @@
   font-size: 24px;
 }
 
-/* Style the login form container */
 .form-inputs-container {
-  width: 350px;
-  height: 400px;
+  width: 465px;
+  height: auto; /* Adjust the height to fit the new sign-up form */
   margin: 0 auto;
+  margin-top: 50px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #f9f9f9; /* Grey background for the login container */
+  background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style form inputs */
+.name-inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.password-inputs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.password-field,
+.password-confirmation-field {
+  flex: 1;
+  width: calc(50% - 5px);
+}
+
+.password-confirmation-field {
+  position:relative;
+  top: -13px
+}
+
+.form-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
 .form-inputs {
   margin-bottom: 20px;
 
