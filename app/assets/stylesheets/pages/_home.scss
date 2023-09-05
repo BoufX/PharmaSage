@@ -1,1 +1,258 @@
 // Specific CSS for your home-page
+
+
+body{
+  display:flex;
+  flex-direction: column;
+  gap:-5em;
+;
+}
+
+.banner {
+  height: 700px;
+  width: 100%;
+  background-image: linear-gradient(to right, #14415F, rgba(0,0,255,0)), url(bg-image.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.something{
+  background-image: url(bg_img.png);
+  background-repeat: no-repeat;
+  height: 596px;
+  width: 538px;
+  margin-top: 126px;
+}
+.whatever{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0,0,0,.2);
+  z-index: 2;
+  position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+.h2-head{
+  color: #ffffff;
+  margin-left: 50px;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 0.9;
+}
+.p-head{
+  color: #ffffff;
+  margin-left: 50px;
+  font-size: 28px;
+  line-height: 0.9;
+}
+#line{
+margin-left: 60px;
+background-color: rgb(255, 255, 255)
+}
+#bg-div{
+  background-color: #e2e0e0;
+  width: 82%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  position: relative;
+  top: -45px;
+  margin-bottom: -50mm;
+  z-index: 0;
+  height: 440px;
+}
+.card{
+ height: 365px;
+ z-index: 1;
+ margin-top: -7px;
+ margin-left: 175px;
+}
+.fa-solid{
+  color: #3FB56E;
+}
+#header{
+  color: #0D4265;
+  font-weight: bold;
+  margin-right: -82px;
+}
+#sub-header{
+  color: #266188a2;
+}
+.custom-link{
+  text-decoration: none;
+  color: #3FB56E;
+  font-weight: bold;
+}
+p{
+  color: #0D4265;
+  margin-left: -3px;
+
+}
+
+
+.container{
+width: 100%;
+display: grid;
+place-items: center;
+height: 1440px;
+left: 0px;
+top: 1785px;
+background: #e2e0e0;
+font-size: x-large;
+margin-top: -45px;
+}
+.btn{
+  border-radius: 50px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.text1{
+  margin-top: -20px;
+  margin-left: 50px;
+}
+.bg-image-1{
+  background-image: url(screenshot.png);
+  background-repeat: no-repeat;
+  height: 180px;
+  width: 200px;
+  margin-left: 666px;
+  margin-bottom: -150px;
+}
+
+.text2{
+  margin-top: 130px;
+  margin-left: 521px;
+}
+.bg-image-2{
+  background-image: url(screenshot.1.png);
+  background-repeat: no-repeat;
+  height: 205px;
+  width: 259px;
+  margin-left: -561px;
+  margin-bottom: -150px
+}
+
+.text3{
+  margin-top: 130px;
+  margin-left: 50px;
+}
+.bg-image-3{
+  background-image: url(screenshot.2.png);
+  background-repeat: no-repeat;
+  height: 205px;
+  width: 211px;
+  margin-left: 684px;
+  margin-bottom: -150px;
+}
+#line1{
+  margin-left: 1px;
+  margin-right: 500px;
+  margin-left: 60px;
+  background-color: #3FB56E;
+  opacity: 10;
+  border-radius: 30px;
+}
+li{
+  font-size: medium;
+  margin-bottom: 6px;
+  margin-right: 197px
+}
+#line2{
+  margin-left: 1px;
+  margin-right: 100px;
+  margin-left: 60px;
+  background-color: #3FB56E;
+  opacity: 10;
+  border-radius: 30px;
+}
+.text-box{
+  margin-top: -10px;
+  margin-left: 75px;
+}
+.image-1{
+margin-left: 370px;
+margin-top: 170px;
+width: 10px;
+margin-bottom: -425px;
+}
+.image-2{
+  margin-left: -532px;
+margin-top: 139px;
+width: 356px;
+margin-bottom: -73px;
+border-radius: 50%;
+}
+#line{
+  margin-left: 60px;
+  background-color: white;
+  opacity: 10;
+  border-radius: 30px;
+}
+
+.f-line {
+  height: 5px;
+  border: 0;
+  width: 100px;
+  opacity: 10;
+  background-color: #3FB56E;
+  border-radius: 30px;
+
+}
+.partners{
+  margin-top: 90px;
+}
+#partnership{
+  margin-bottom: 10px;
+  height: 339px;
+  background-color: #ffffff;
+  max-width: 100%;
+    margin-top: 10px;
+
+}
+#line3{
+  height: 5px;
+  border: 0;
+  opacity: 10;
+  background-color: #3FB56E;
+  border-radius: 30px;
+  line-height: 0.9;
+  margin-top: -20px;
+  width: 128px;
+}
+.picture{
+  background-image: url(partners.png);
+  background-repeat: no-repeat;
+  height: 170px;
+  width: 869px;
+}
+#last-thing{
+  margin-bottom: 10px;
+  height: 339px;
+  background-color: #0D4265;
+  max-width: 100%;
+    margin-top: -12px;
+
+
+}
+#last-thing p{
+  color: #ffffffd1;
+  display: flex;
+  align-items: center;
+  margin-top: -4px;
+  font-family: 'Ibarra Real Nova', serif;
+  font-size: larger;
+}
+.button{
+margin-top: -45px;
+}
+.phone-info {
+  margin-left: 100px;
+}
