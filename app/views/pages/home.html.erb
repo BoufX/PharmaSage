@@ -1,6 +1,3 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
 <% if  user_signed_in? && current_user.admin? %>
   <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
   <%= link_to "Admin", rails_admin_path, class: "btn btn-secondary" %>
@@ -9,3 +6,75 @@
 <% else %>
   <%= link_to "Sign in", new_user_session_path, method: :delete, class: "btn btn-primary" %>
 <% end %>
+<div id="grad" class= "banner d-flex flex-column justify-content-center align-item-center">
+  <h2 class= "h2-head">Sorting health,</h2>
+  <h2 class= "h2-head">delivering care</h2>
+<hr id="line" style="height:5px; border-width:0; text-align:left; width:100px">
+  <p class="p-head">PharmaSage is your comprehensive partner</p>
+  <p class="p-head">in health and well-being.</p>
+</div>
+<div id="bg-div" class="d-flex justify-content-between">
+  <div class="w-50 ms-5">
+  <div>
+    <h2 id="header">A Medication Availability Checker For You</h2>
+  </div>
+  <hr id="h-line">
+  <div>
+    <p id="sub-header">Our compounding advisors are here to provide our many years of experience to work for your individual requirements</p>
+  </div>
+  </div>
+</div>
+
+<div id="card" class="d-flex justify-content-between align-items-center mb-5 ">
+  <div class="card w-25 ms-5 shadow p-3 mb-5 bg-body">
+    <i class="fa-solid fa-map fa-3x my-4 ms-4"></i>
+      <div class="w-55 ms-4 my-1">
+        <p><strong>On-call pharmacies</strong></p>
+      <p>Find your on-call pharmacies open during non-business hours</p>
+    <%= link_to "Locate Now", "#", class: "custom-link"%>
+      </div>
+  </div>
+
+  <div class="card w-25 shadow p-3 mb-5 bg-body">
+    <i class="fa-solid fa-mortar-pestle fa-3x my-4 ms-4"></i>
+      <div class="w-55 ms-4 my-1 ">
+        <p><strong>Compounding services</strong></p>
+      <p>We offer a wide range of compounding services designed just for you</p>
+    <%= link_to "Learn More", "#", class: "custom-link"%>
+      </div>
+  </div>
+
+  <div class="card w-25 me-5 shadow p-3 mb-5 bg-body">
+    <i class="fa-solid fa-prescription-bottle fa-3x my-4 ms-4"></i>
+      <div class="w-55 ms-4 my-1">
+        <p><strong>Online Reservation</strong></p>
+      <p>Our app allows you to reserve products designed to keep you healthy</p>
+    <%= link_to "Reserve Now", "#", class: "custom-link"%>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+<div class="text1">
+  <p><strong>All your Medicine needs in one place</strong></p>
+    <hr id="line1">
+        <li>Search and find all kind of drugs</li>
+    <li>We have drugs for special case treatments</li>
+        <li>Get notified when your drug is available</li>
+  <button type="button" class="btn btn-outline-success">Search Pharmacy </button>
+</div>
+<div class="text1">
+  <p><strong>Reserve your medicine now</strong></p>
+    <hr id="line1">
+        <li>Get your profile ready and reserve your medicine in one click.</li>
+  <button type="button" class="btn btn-outline-success">Order Now </button>
+</div>
+<div class="text1">
+  <p><strong>Set up your profile and get started</strong></p>
+    <hr id="line1">
+        <li>When you are a member you reserve your medicine easily</li>
+        <li>With one click your medicine will be waiting for you at your local pharmacy</li>
+        <li>Chat with a pharmacist</li>
+  <button type="button" class="btn btn-outline-success">Get Started </button>
+</div>
+</div>
