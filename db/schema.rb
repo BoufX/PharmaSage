@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_30_121042) do
+
+ActiveRecord::Schema[7.0].define(version: 2023_09_04_214323) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,28 +30,39 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_30_121042) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "amount"
   end
 
   create_table "pharmacies", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.integer "phone_number"
     t.string "email"
     t.float "longitude"
     t.float "latitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "phone_number"
   end
 
   create_table "reservations", force: :cascade do |t|
     t.integer "amount"
-    t.string "status"
     t.bigint "user_id", null: false
     t.bigint "medicine_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["medicine_id"], name: "index_reservations_on_medicine_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "name"
+    t.string "comment"
+    t.string "rating"
+    t.bigint "pharmacy_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "post_date"
+    t.index ["pharmacy_id"], name: "index_reviews_on_pharmacy_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -60,6 +73,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_30_121042) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+
+    t.string "nickname"
+
+    t.string "first_name"
+    t.string "last_name"
+    t.boolean "admin", default: false, null: false
+
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -68,4 +88,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_30_121042) do
   add_foreign_key "availabilities", "pharmacies"
   add_foreign_key "reservations", "medicines"
   add_foreign_key "reservations", "users"
+  add_foreign_key "reviews", "pharmacies"
 end
