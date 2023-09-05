@@ -1,40 +1,51 @@
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <nav class="navbar bg-light">
-  <div class="container-fluid ph-navbar">
-    <form class="d-flex" role="search">
-      <input class="form-control me-2 search" style="border-radius: 100vmax;" type="search" placeholder="Type your medicine name" aria-label="Search">
-      <button class="btn btn-outline-success ph-search-btn" style="border-radius: 100vmax;" type="submit">Search</button>
-    </form>
-    <button class="btn btn-outline-success ph-logout-btn" style="border-radius: 100vmax;" type="submit">Logout</button>
+  <div class="container-fluid">
+   <a class="navbar-brand pharmasage-title" href="#">PharmaSage</a>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-success ph-logout-btn" type="submit"> Logout </button>
+    </div>
   </div>
 </nav>
 
 
-<h1>Pharmacy List</h1>
-    <div>
-        <button class="button">Open</button>
-        <button class="button">On-call</button>
-        <i class="fa-regular fa-filter-list"></i>
+<div class="pharmacy-container">
+ <div class="ph-list"> 
+ <div class="ph-search-bar">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2 search" style="" type="search" placeholder="Type your medicine name" aria-label="Search">
+      <button class="btn btn-outline-success ph-search-btn" style="margin-left: -9px;" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
     </div>
-<div class="container-pm">
-<div>
- <% @pharmacies.each do |pharmacy| %>
-  <div class="card-product">
-   <div class="card-product-infos">
-    <h2> <%= pharmacy.name %></h2>
-    <p> <%= pharmacy.address %> </p>
-    <div class="d-grid gap-2">
-     <button class="btn btn-success phone" id="phone" type="button"> 
-     <i class="fa-solid fa-phone phone-icon"></i>
-      <%= pharmacy.phone_number%>
-     </button>
-     </div>
-   </div>
+        <div class="button-list">
+        <div class="two-btns">
+            <button class="button open">Open</button>
+            <button class="button on-call">On-call</button>
+            </div>
+            <button class="button filter"> Filter</button>
+        </div>
+    <div>
+    <div class="pharmacy-list-container scroll" style="max-height: 100vh; overflow-y: auto;">
+  <% @pharmacies.each do |pharmacy| %>
+    <a href="<%= pharmacy_path(pharmacy) %>" class="card-product-link">
+      <div class="card-product">
+        <div class="card-product-infos">
+          <h2><%= pharmacy.name %></h2>
+          <p><%= pharmacy.address %></p>
+          <p class="phone-num"><%= pharmacy.phone_number %></p>
+        </div>
+      </div>
+    </a>
+  <% end %>
   </div>
- <% end%>
- <div style="width:40%; height: 600px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
- </div>
- </div>
+</div>
+
+
+   </div>
+
+        <div
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>" class="map-design">
+     </div>
+</div>
