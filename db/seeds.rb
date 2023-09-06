@@ -7,10 +7,15 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts "destroying all"
 
+Pharmacy.destroy_all
+Medicine.destroy_all
+User.destroy_all
+
 User.create!(email:"bouf@gmail.com", password:"123456")
 
-
-
+Chatroom.create(name: "general")
+User.create(email: "sebastien@lewagon.org", nickname: "Sebastien", password: "123456", first_name: "seb", last_name: "tien", admin: true)
+User.create(email: "boris@lewagon.org", nickname: "Boris", password: "123456", first_name: "bo", last_name: "ris", admin: true)
 
 puts "Seeding pharmacies"
 Pharmacy.create(name: "Pharmacie Du Maarif", address: "HAY MOHAMMADI, Casablanca", phone_number: "+212-522-25-01-28")

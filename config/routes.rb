@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   resources :reviews
   resources :reservation, only: %i[create]
   resources :medicines, only: %i[index show]
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
 end
