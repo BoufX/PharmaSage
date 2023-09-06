@@ -42,19 +42,19 @@ body{
 }
 .h2-head{
   color: #ffffff;
-  margin-left: 50px;
+  margin-left: 23px;
   font-size: 60px;
   font-weight: bold;
-  line-height: 0.9;
+  line-height: -0.1;
 }
-.p-head{
+.head-text{
   color: #ffffff;
-  margin-left: 50px;
+  margin-left: 25px;
   font-size: 28px;
   line-height: 0.9;
 }
 #line{
-margin-left: 60px;
+margin-left: -246px;
 background-color: rgb(255, 255, 255)
 }
 #bg-div{
@@ -66,34 +66,57 @@ background-color: rgb(255, 255, 255)
   top: -45px;
   margin-bottom: -50mm;
   z-index: 0;
-  height: 440px;
+  height: 375px;
 }
 .card{
- height: 365px;
+  height: 309px;
  z-index: 1;
- margin-top: -7px;
- margin-left: 175px;
+ margin-top: 20px;
+ margin-left: 141px !important;
+ margin-right: -94px !important;
+ width: 50px;
 }
+
 .fa-solid{
   color: #3FB56E;
+  margin-left: -194px;
+  margin-top: 38px;
 }
-#header{
+#hero-text{
   color: #0D4265;
   font-weight: bold;
   margin-right: -82px;
 }
-#sub-header{
+#sub-hero{
   color: #266188a2;
 }
 .custom-link{
   text-decoration: none;
   color: #3FB56E;
   font-weight: bold;
+  margin-left: -174;
+}
+.join-call{
+  margin-left: -15px;
+}
+.speak-to-advisor{
+  margin-left: -30px;
 }
 p{
   color: #0D4265;
   margin-left: -3px;
 
+}
+.online-reserve-card{
+  margin-left: -114px;
+}
+.online-reserve-description{
+  margin-left: -18px;
+  text-align: start;
+}
+.compounding-services{
+  margin-left: -94px;
+  text-align: start;
 }
 
 
@@ -101,12 +124,12 @@ p{
 width: 100%;
 display: grid;
 place-items: center;
-height: 1440px;
+height: 1418px;
 left: 0px;
 top: 1785px;
 background: #e2e0e0;
 font-size: x-large;
-margin-top: -45px;
+margin-top: 30px;
 }
 .btn{
   border-radius: 50px;
@@ -163,7 +186,7 @@ margin-top: -45px;
 li{
   font-size: medium;
   margin-bottom: 6px;
-  margin-right: 197px
+  margin-right: 185px
 }
 #line2{
   margin-left: 1px;
@@ -198,19 +221,18 @@ border-radius: 50%;
 }
 
 .f-line {
-  height: 5px;
   border: 0;
   width: 100px;
-  opacity: 10;
+  opacity: 10 !important;
   background-color: #3FB56E;
   border-radius: 30px;
-
+size: 10px;
 }
 .partners{
   margin-top: 90px;
 }
 #partnership{
-  margin-bottom: 10px;
+  margin-bottom: -10px;
   height: 339px;
   background-color: #ffffff;
   max-width: 100%;
@@ -235,10 +257,10 @@ border-radius: 50%;
 }
 #last-thing{
   margin-bottom: 10px;
-  height: 339px;
+  height: 369px;
   background-color: #0D4265;
   max-width: 100%;
-    margin-top: -12px;
+  margin-top: 10px;
 
 
 }
@@ -246,13 +268,70 @@ border-radius: 50%;
   color: #ffffffd1;
   display: flex;
   align-items: center;
-  margin-top: -4px;
+  margin-top: 26px;
   font-family: 'Ibarra Real Nova', serif;
   font-size: larger;
 }
-.button{
-margin-top: -45px;
+.button-to-join{
+margin-top: -20px !important;
+padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    outline-color: #ffffff !important;
 }
 .phone-info {
-  margin-left: 100px;
+  margin-left: 50px;
+  text-align: center;
+  margin-top: -53px;
+}
+
+/* HEADER & FOOTER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.80;
+  -khtml-opacity: 0.8;
+  opacity: 0.8;
+  color: white;
+  position:sticky !important;
+  width: 100%;
+  height: 100px;
+  z-index: 2 ;
+}
+.brand {
+  font-size: 25px;
+  font-weight: 900;
+  margin: 960px !important;
+  color: rgb(255, 255, 255) !important;
+  margin-left: 35px !important;
+}
+.navigation {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 18px;
+}
+.navigation a {
+  text-decoration: none;
+  color: rgb(255, 255, 255) !important;
+}
+.page-container{
+  position: absolute;
+  z-index: 2;
+}
+.d-flex{
+  display: flex;
+  align-items: end;
+  margin-right: 100px;
+}
+
+#home-ban-text {
+  margin-right: 300px;
 }
