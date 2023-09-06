@@ -1,27 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light ph-nav">
-  <a class="navbar-brand pharmasage-title" href="#">PharmaSage</a>
+  <%= link_to "PharmaSage", root_path , class: "navbar-brand pharmasage-title" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link on-call-btn" href="#">On-call</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link about-btn" href="#">About</a>
-      </li>
-    </ul>
   </div>
-  <div class="navbar-text">
-    <button class="btn btn-success ph-logout-btn" style="margin-right: 10px;" type="submit">Logout</button>
+  <div class="navbar-text ml-auto">
+    <button class="btn btn-success ph-logout-btn" style="margin-right: 10px; margin-bottom: 10px;" type="submit">Logout</button>
   </div>
 </nav>
-
-<div class="main-card d-flex justify-content-between">
+<div class="ph-selected-container ph-selected-bg">
+ <div class="main-card d-flex justify-content-between" style="padding-right: 40px;">
  <div class="first-card d-flex justify-content-center" style="width: 45%;">
   <div class="ph-selected-card">
-     <div class="card d-flex justify-content-center">
+     <div class="card d-flex justify-content-center pharmacy-selected-card">
         <div class="ph-selected-img">
             <img src="https://shorturl.at/iIJZ5" alt="Pharmacy-Avatar">
             </div>
@@ -30,12 +22,13 @@
             <p class="ph-card-address"><i class="fa-solid fa-map-pin"></i>  <%= @pharmacy.address %></p>
             <p class="phone-num"><%= @pharmacy.phone_number %></p>
            </div>
+     
           </div>
-            <a href="#" class="chat-button" style="width: 109.5%"><i class="fa-regular fa-comment-dots"></i> Chat with the Pharmacist</a>
+            <a href="#" class="ph-chat-button" style="width: 109.5%"><i class="fa-regular fa-comment-dots"></i> Chat with the Pharmacist</a>
    </div>
   </div>
 
-    <div class="second-card" style="display: inline-block; width: 45%; vertical-align: top;">
+    <div class="second-card" style="display: inline-block; width: 45%; vertical-align: top; margin-top:30px;">
       <div class="opening-hours-info" style="margin-left: 0;">
   <table>
   <tr>
@@ -106,4 +99,5 @@
       <% end %>
         </div>
     </div>
+</div>
 </div>

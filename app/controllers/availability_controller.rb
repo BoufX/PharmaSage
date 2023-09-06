@@ -1,9 +1,14 @@
 class AvailabilityController < ApplicationController
-    def check_availability
-        medicine_name = params[:medicine_name]
-        pharmacy_name = params[:pharmacy_name]
+  def search
     
-        medicine = Medicine.find_by(name: medicine_name)
-        pharmacy = Pharmacy.find_by(name: pharmacy_name)
-      end
+    medicine_name = params[:medicine_name]
+
+    if params[:query].present?
+      @availabilities = Availability.joins(:pharmacies, :medicines)
+      .where("medicines.name ILIKE ?", "%#{medicine_name}%")
+      .distinct
+     else
+      @availabilities = Availability.all
+    end
+  end
 end
