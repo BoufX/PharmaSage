@@ -12,37 +12,42 @@
 <div class="pharmacy-container">
  <div class="ph-list"> 
  <div class="ph-search-bar">
-    <form class="d-flex" role="search">
-      <input class="form-control me-2 search" style="" type="search" placeholder="Type your medicine name" aria-label="Search">
-      <button class="btn btn-outline-success ph-search-btn" style="margin-left: -9px;" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-    </form>
+    <%= form_with url: pharmacies_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Type your medicine"
+          %>
+          <button class="btn btn-outline-success ph-search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <% end %>
     </div>
         <div class="button-list">
         <div class="two-btns">
             <button class="button open">Open</button>
             <button class="button on-call">On-call</button>
             </div>
-            <button class="button filter"> Filter</button>
         </div>
     <div>
     <div class="pharmacy-list-container scroll" style="max-height: 100vh; overflow-y: auto;">
-  <% @pharmacies.each do |pharmacy| %>
-    <a href="<%= pharmacy_path(pharmacy) %>" class="card-product-link">
+     <% @availabilities.each do |availability| %>
+     <a href="<%= pharmacy_path(availability.pharmacy) %>" class="card-product-link">
       <div class="card-product">
         <div class="card-product-infos">
-          <h2><%= pharmacy.name %></h2>
-          <p><%= pharmacy.address %></p>
-          <p class="phone-num"><%= pharmacy.phone_number %></p>
+          <h2><%= availability.pharmacy.name %></h2>
+          <p><%= availability.pharmacy.address %></p>
+          <p class="phone-num"><%= availability.pharmacy.phone_number %></p>
         </div>
       </div>
     </a>
   <% end %>
+   
+
+
   </div>
 </div>
 
 
    </div>
-
         <div
         data-controller="map"
         data-map-markers-value="<%= @markers.to_json %>"
