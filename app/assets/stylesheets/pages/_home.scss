@@ -5,7 +5,6 @@ body{
   display:flex;
   flex-direction: column;
   gap:-5em;
-;
 }
 
 .banner {
@@ -68,7 +67,7 @@ background-color: rgb(255, 255, 255)
   z-index: 0;
   height: 375px;
 }
-.card{
+.card-ps{
   height: 309px;
  z-index: 1;
  margin-top: 20px;
@@ -79,8 +78,12 @@ background-color: rgb(255, 255, 255)
 
 .fa-solid{
   color: #3FB56E;
-  margin-left: -194px;
-  margin-top: 38px;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}
+.card-ph {
+  position: relative;
 }
 #hero-text{
   color: #0D4265;
@@ -107,9 +110,9 @@ p{
   margin-left: -3px;
 
 }
-.online-reserve-card{
+/* .online-reserve-card{
   margin-left: -114px;
-}
+} */
 .online-reserve-description{
   margin-left: -18px;
   text-align: start;
@@ -325,11 +328,6 @@ padding-top: 10px;
 .page-container{
   position: absolute;
   z-index: 2;
-}
-.d-flex{
-  display: flex;
-  align-items: end;
-  margin-right: 100px;
 }
 
 #home-ban-text {
