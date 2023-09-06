@@ -84,6 +84,7 @@ background-color: rgb(255, 255, 255)
 }
 .card-ph {
   position: relative;
+  height: 240px;
 }
 #hero-text{
   color: #0D4265;
@@ -110,12 +111,14 @@ p{
   margin-left: -3px;
 
 }
-/* .online-reserve-card{
-  margin-left: -114px;
-} */
+ .online-reserve-card {
+  margin-left: -18px;
+  top: 10px;
+}
 .online-reserve-description{
   margin-left: -18px;
   text-align: start;
+  margin-top: 60px;
 }
 .compounding-services{
   margin-left: -94px;
