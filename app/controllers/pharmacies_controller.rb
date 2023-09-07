@@ -10,6 +10,12 @@ class PharmaciesController < ApplicationController
           @availabilities = Availability.joins(:medicine).where(sql_subquery, query: "%#{params[:query]}%")
           @pharmacies = Pharmacy.where(id: @availabilities.pluck(:pharmacy_id))
         end
+
+        @open =  params[:rdo] == "open"
+        if params[:rdo].present?
+          @pharmacies = @pharmacies.where("status= :query", query: params[:rdo] == "open")
+          
+        end
         # @on_guard_pharmacies = filter_on_guard_pharmacies(@pharmacies)
         @markers = @pharmacies.geocoded.map do |pharmacy|
             {
