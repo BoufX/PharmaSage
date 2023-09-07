@@ -1,133 +1,156 @@
 
-/* Reset default margin and padding for all elements */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+#chatroom{
 
-/* Apply a base font size and family to the entire page */
-body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  // overflow:hidden;
-}
+  .pharmacy-info {
+    width: 30%; /* Adjust the width as needed */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+  }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: transparent;
-  /*Opacity start*/
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=80);
-  -moz-opacity: 0.80;
-  -khtml-opacity: 0.8;
-  opacity: 0.8;
-  /*Opacity end*/
-  color: white;
-  position: fixed;
-  width: 100%;
-  height: 60px!important;
-}
+  .chat-core {
+    display: flex; /* Add display: flex to arrange pharmacy-info and chatroom side by side */
+    justify-content: space-between; /* Add space between pharmacy-info and chatroom */
+    align-items: flex-start; /* Align content to the top */
+    flex-grow: 1;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+  }
 
-.logo {
-  margin-bottom: 10px;
-}
+  .social-chat {
+    width: 70%; /* Adjust the width as needed */
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 
-.navigation {
-  margin-top: 10px;
-}
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+    /*Opacity start*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.80;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+    /*Opacity end*/
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 60px!important;
+    z-index: 100;
+  }
 
-.container.chatroom {
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin-top: 20px;
-  width: 80%;
-  max-width: 800px;
-  position: relative; /* Add this to allow z-index to work */
-  top: 70px; /* Add a lower z-index value */
-}
+  .logo {
+    margin-bottom: 10px;
+  }
 
-.messages {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-top: 10px;
-  max-height: 350px; /* Limit the height of the message container and add scrollbar if necessary */
-  overflow-y: auto;
-  background-color: #fff; /* Change the background color */
-  border-radius: 5px; /* Add a slight border-radius to soften edges */ /* Add a vertical scrollbar when content overflows */
-}
+  .brand-hero {
+    font-size: 28px;
+    font-weight: 900;
+    text-decoration: none;
+    color: #0D4265 !important;
+  }
 
-/* Customize the chatroom container */
-.chatroom {
-  background: white;
-  margin-top: 9px;
-  height: calc(100vh - 75px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
-}
+  .navigation-hero a {
+    margin-top: 10px;
+    color: #0D4265 !important;
+  }
 
-/* Style the chatroom title (h1) */
-.chatroom h1 {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 0;
-  padding: 1rem;
-  background-color: #f0f0f0; /* Add a background color to the title */
-  color: #333; /* Change title text color */
-  border-radius: 5px 5px 0 0; /* Rounded corners for the top */
-}
+  .container.chatroom {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 800px;
+    position: relative; /* Add this to allow z-index to work */
+    top: 70px; /* Add a lower z-index value */
+  }
 
-/* Style the new message input area */
-.chatroom #new_message {
-  border-top: 1px solid #ccc;
-  padding: 1rem;
-  background-color: #f5f5f5; /* Add a background color to the input area */
-  border-radius: 0 0 5px 5px; /* Rounded corners for the bottom */
-}
+  .messages {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    max-height: 350px; /* Limit the height of the message container and add scrollbar if necessary */
+    overflow-y: auto;
+    background-color: #fff; /* Change the background color */
+    border-radius: 5px; /* Add a slight border-radius to soften edges */ /* Add a vertical scrollbar when content overflows */
+  }
 
-/* Customize the form group within the new message input area */
-.chatroom #new_message .form-group {
-  margin-bottom: 0;
-}
+  /* Customize the chatroom container */
+  .chatroom {
+    background: white;
+    margin-top: 9px;
+    height: calc(100vh - 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
 
-/* Style the send button */
-.chatroom #new_message .btn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px; /* Rounded button corners */
-  cursor: pointer; /* Change cursor on hover */
-}
+  /* Style the chatroom title (h1) */
+  .chatroom h1 {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0;
+    padding: 1rem;
+    background-color: #f0f0f0; /* Add a background color to the title */
+    color: #333; /* Change title text color */
+    border-radius: 5px 5px 0 0; /* Rounded corners for the top */
+  }
 
-/* Hover effect for the send button */
-.chatroom #new_message .btn:hover {
-  background-color: #0056b3;
-}
+  /* Style the new message input area */
+  .chatroom #new_message {
+    border-top: 1px solid #ccc;
+    padding: 1rem;
+    background-color: #f5f5f5; /* Add a background color to the input area */
+    border-radius: 0 0 5px 5px; /* Rounded corners for the bottom */
+  }
 
-/* Style message bubbles */
-.messages .message {
-  background-color: #e5e5ea;
-  border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 10px;
-}
+  /* Customize the form group within the new message input area */
+  .chatroom #new_message .form-group {
+    margin-bottom: 0;
+  }
 
-/* Example of adding user avatars */
-.messages .message .avatar {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-right: 10px;
-  background-color: #007bff; /* Example background color for avatars */
-  color: #fff; /* Example text color for avatars */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 16px;
+  /* Style the send button */
+  .chatroom #new_message .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer; /* Change cursor on hover */
+  }
+
+  /* Hover effect for the send button */
+  .chatroom #new_message .btn:hover {
+    background-color: #0056b3;
+  }
+
+  /* Style message bubbles */
+  .messages .message {
+    background-color: #e5e5ea;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* Example of adding user avatars */
+  .messages .message .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #007bff; /* Example background color for avatars */
+    color: #fff; /* Example text color for avatars */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+  }
 }

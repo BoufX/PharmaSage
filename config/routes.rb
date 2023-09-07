@@ -6,14 +6,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :pharmacies, only: %i[index show] do 
+  resources :pharmacies, only: %i[index show] do
     resources :reviews
+    resources :chatrooms, only: :show do
+      resources :messages, only: :create
+    end
   end
 
   resources :reviews
   resources :reservation, only: %i[create]
   resources :medicines, only: %i[index show]
-  resources :chatrooms, only: :show do
-    resources :messages, only: :create
-  end
+
 end

@@ -11,3 +11,11 @@
 @import "components/index";
 @import "pages/index";
 @import "pages/pharmacies";
+
+
+/* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
