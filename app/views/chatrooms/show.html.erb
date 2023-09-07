@@ -1,40 +1,57 @@
+<div id="chatroom">
 
-<header class="header">
-  <div class="logo">
-       <%= link_to "PharmaSage", root_path, class: 'brand' %>
-  </div>
-  <nav class="navigation">
+  <header class="header">
+    <div class="logo">
+      <%= link_to root_path, class: "brand-hero" do %>
+        <%= image_tag("https://i.ibb.co/MsmrhWR/Screenshot-34-removebg-preview-1.png", alt: "PharmaSage", style: "width: 205px;margin-top: 12px;margin-left: -13px;") %>
+      <% end %>
+    </div>
+    <nav class="navigation-hero">
       <!-- Navigation links, e.g., Home, About, Contact -->
       <a href="#">About</a>
       <a href="#">Contact</a>
-  </nav>
-</header>
+    </nav>
+  </header>
 
-<div class="container chatroom" data-controller="chatroom-subscription"
-  data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
-  <h1>#<%= @chatroom.name %></h1>
-
-<div class="messages" data-chatroom-subscription-target="messages">
-  <% @chatroom.messages.each do |message| %>
-    <div class="message">
-      <div class="avatar">
-        <!-- Add user avatar here if available -->
-      </div>
-      <div class="content">
-        <%= render "messages/message", message: message %>
+  <div class="chat-core">
+    <div id="pharmacy-info">
+      <div class="ph-selected-card">
+        <div class="card d-flex justify-content-center pharmacy-selected-card">
+          <div class="ph-selected-img">
+            <img src="https://shorturl.at/iIJZ5" alt="Pharmacy-Avatar">
+          </div>
+          <div class="ph-card-info">
+            <h2 class="ph-card-name"> <%= @pharmacy.name %></h2>
+            <p class="ph-card-address"><i class="fa-solid fa-map-pin"></i>  <%= @pharmacy.address %></p>
+            <p class="phone-num"><%= @pharmacy.phone_number %></p>
+          </div>
+        </div>
       </div>
     </div>
-  <% end %>
-</div>
 
-  <%= simple_form_for [@chatroom, @message],
-      html: {class: "d-flex", data: { action: "turbo:submit-end->chatroom-subscription#resetForm" } } do |f|
-  %>
-    <%= f.input :content,
-        label: false,
-        placeholder: "Message ##{@chatroom.name}",
-        wrapper_html: {class: "flex-grow-1"}
-    %>
-  <%= f.submit "Send", class: "btn btn-primary mb-3" %>
-  <% end %>
+    <div class="social-chat" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
+      <h1>#<%= @chatroom.name %></h1>
+
+      <div class="messages" data-chatroom-subscription-target="messages">
+        <% @chatroom.messages.each do |message| %>
+          <div class="message">
+            <div class="content">
+              <%= render "messages/message", message: message %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <%= simple_form_for [@pharmacy, @chatroom, @message],
+          html: {class: "d-flex", data: { action: "turbo:submit-end->chatroom-subscription#resetForm" } } do |f|
+      %>
+        <%= f.input :content,
+            label: false,
+            placeholder: "Message ##{@chatroom.name}",
+            wrapper_html: {class: "flex-grow-1"}
+        %>
+        <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+      <% end %>
+    </div>
+  </div>
 </div>
