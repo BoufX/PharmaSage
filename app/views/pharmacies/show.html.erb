@@ -22,7 +22,7 @@
             <p class="ph-card-address"><i class="fa-solid fa-map-pin"></i>  <%= @pharmacy.address %></p>
             <p class="phone-num"><%= @pharmacy.phone_number %></p>
            </div>
-     
+
           </div>
             <a href="#" class="ph-chat-button" style="width: 109.5%"><i class="fa-regular fa-comment-dots"></i> Chat with the Pharmacist</a>
    </div>
@@ -62,17 +62,17 @@
   <tr>
     <td><b>Saturday</b></td>
     <td><b><span style="color:#228B22">09:00 to 13:00</span></b></td>
-    <td></td> 
+    <td></td>
   </tr>
   <tr>
     <td><b>Sunday</b></td>
     <td><span style="color:red"><b>Closed</b></span></td>
-    <td></td> 
+    <td></td>
   </tr>
 </table>
 
        </div>
-       <h2> <b> On-call Schedule 24H</b> </h2> 
+       <h2> <b> On-call Schedule 24H</b> </h2>
        <span style="color:#b30000" style="font-weight:bold"><b>From the 20th to the 27th of Sep, 2023</b></span> </p>
      </div>
   </div>
@@ -93,13 +93,13 @@
         <p class="left-align"><span style="color:#0047AB"><b><%= r.post_date %></b></span></p>
         <p class="right-align"><b>Review :</b><b><% (r.rating.to_i).times do %>
           ⭐
-        <% end %> 
+        <% end %>
         </b></p>
      </div>
   </div>
 </div>
      </div>
-        
+
       <% end %>
         </div>
     </div>
