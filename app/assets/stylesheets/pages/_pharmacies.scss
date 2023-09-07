@@ -600,3 +600,14 @@ label[for="no"] {
   background-color: #45a049; /* Slightly darker green on hover */
 }
 
+.pharmasage-logo {
+  background-image: url(/assets/pharma-sage.png);
+  width: 100px; /* Set the width you desire */
+  height: 100px; /* Set the height you desire */
+  background-size: contain; /* This ensures the image fits within the dimensions */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  display: block; /* Makes the anchor a block element */
+  text-indent: -9999px; /* Hides any anchor text by moving it off-screen */
+}
+
+
