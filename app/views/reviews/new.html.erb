@@ -1,0 +1,7 @@
+<%= simple_form_for [@pharmacy, @review] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :comment %>
+    <%= f.input :rating%>
+    <%= f.input :post_date%>
+    <%= f.submit "Create Review", class: "btn btn-primary" %>
+  <% end %>
