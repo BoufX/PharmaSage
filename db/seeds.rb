@@ -13,25 +13,28 @@ User.destroy_all
 
 User.create!(email:"bouf@gmail.com", password:"123456")
 
-Chatroom.create(name: "general")
-User.create(email: "sebastien@lewagon.org", nickname: "Sebastien", password: "123456", first_name: "seb", last_name: "tien", admin: true)
-User.create(email: "boris@lewagon.org", nickname: "Boris", password: "123456", first_name: "bo", last_name: "ris", admin: true)
+User.create(email: "sebastien@lewagon.org", nickname: "Pharmacist", password: "123456", first_name: "seb", last_name: "tien", admin: true)
+User.create(email: "boris@lewagon.org", nickname: "User", password: "123456", first_name: "bo", last_name: "ris", admin: true)
 
 puts "Seeding pharmacies"
-Pharmacy.create(name: "Pharmacie Du Maarif", address: "HAY MOHAMMADI, Casablanca", phone_number: "+212-522-25-01-28", status: true)
-Pharmacy.create(name: "Pharmacie Universelle", address: "AIN SEBAA, Casablanca", phone_number: "+212-522-25-31-42", status: false)
-Pharmacy.create(name: "Pharmacie Franceville", address: "SIDI MOUMEN, Casablanca", phone_number: "+212-522-23-04-21", status: false)
-Pharmacy.create(name: "Pharmacie Acharaf", address: "AIN CHOCK, Casablanca", phone_number:"+212-522-11-21-21", status: true)
-Pharmacy.create(name: "Pharmacie Al Akhawayn", address: "AL FIDA, Casablanca", phone_number:"+212-522-52-11-01", status: false)
-Pharmacy.create(name: "Pharmacie Maarouf", address: "EL MAARIF, Casablanca", phone_number:"+212-522-41-22-17", status: false)
-Pharmacy.create(name: "Pharmacie Ghandi", address: "SIDI OTHMANE, Casablanca", phone_number:"+212-522-11-21-21", status: true)
-Pharmacy.create(name: "Pharmacie La Paix", address: "BOURGOGNE, Casablanca", phone_number:"+212-547-00-89-11", status: true)
-Pharmacy.create(name: "Pharmacie Sidi Al Khadir", address: "HAY HASSANI, Casablanca", phone_number:"+212-500-89-58-10", status: true)
-Pharmacy.create(name: "Pharmacie Sadiqi", address: "ANFA, Casablanca", phone_number:"+212-523-07-89-01", status: true)
-Pharmacy.create(name: "Pharmacie Paris", address: "AL QUDS, Casablanca", phone_number:"+212-596-25-35-95", status: true)
-Pharmacy.create(name: "Pharmacie Bournazel", address: "ENNASSIM, Casablanca", phone_number:"+212-577-02-14-75", status: false)
-Pharmacy.create(name: "Pharmacie Rocroy", address: "HAY EL HANA, Casablanca", phone_number:"+212-511-85-69-47", status: true)
-Pharmacy.create(name: "Pharmacie Essadik", address: "HAY SALAM, Casablanca", phone_number:"+212-541-12-07-78", status: true)
+
+Pharmacy.create(name: "Pharmacie Du Maarif", address: "HAY MOHAMMADI, Casablanca", phone_number: "+212-522-25-01-28" , user: User.first, status: true)
+Pharmacy.create(name: "Pharmacie Universelle", address: "AIN SEBAA, Casablanca", phone_number: "+212-522-25-31-42" , user: User.first, status: false)
+Pharmacy.create(name: "Pharmacie Franceville", address: "SIDI MOUMEN, Casablanca", phone_number: "+212-522-23-04-21" , user: User.first, status: false)
+Pharmacy.create(name: "Pharmacie Acharaf", address: "AIN CHOCK, Casablanca", phone_number: "+212-522-11-21-21" , user: User.first, status: true)
+Pharmacy.create(name: "Pharmacie Al Akhawayn", address: "AL FIDA, Casablanca", phone_number: "+212-522-52-11-01" , user: User.first, status: false)
+Pharmacy.create(name: "Pharmacie Maarouf", address: "EL MAARIF, Casablanca", phone_number: "+212-522-41-22-17" , user: User.first, status: false)
+Pharmacy.create(name: "Pharmacie Ghandi", address: "SIDI OTHMANE, Casablanca", phone_number: "+212-522-11-21-21" , user: User.first, status: true)
+Pharmacy.create(name: "Pharmacie La Paix", address: "BOURGOGNE, Casablanca", phone_number: "+212-547-00-89-11" , user: User.first, status: true)
+Pharmacy.create(name: "Pharmacie Sidi Al Khadir", address: "HAY HASSANI, Casablanca", phone_number: "+212-500-89-58-10" , user: User.first, status: true)
+Pharmacy.create(name: "Pharmacie Sadiqi", address: "ANFA, Casablanca", phone_number:"+212-523-07-89-01" , user: User.first, status: true)
+Pharmacy.create(name: "Pharmacie Paris", address: "AL QUDS, Casablanca", phone_number:"+212-596-25-35-95" , user: User.first, status: true)
+Pharmacy.create(name: "Pharmacie Bournazel", address: "ENNASSIM, Casablanca", phone_number:"+212-577-02-14-75" , user: User.first, status: false)
+Pharmacy.create(name: "Pharmacie Rocroy", address: "HAY EL HANA, Casablanca", phone_number:"+212-511-85-69-47" , user: User.first, status: true)
+Pharmacy.create(name: "Pharmacie Essadik", address: "HAY SALAM, Casablanca", phone_number:"+212-541-12-07-78" , user: User.first, status: true)
+
+Chatroom.create(name: "Assistance", pharmacy: Pharmacy.first, user: User.first)
+
 
 puts "Seeding medicines"
 Medicine.create(name: "Aspro", amount:"3")

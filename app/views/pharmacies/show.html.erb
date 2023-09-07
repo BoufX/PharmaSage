@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light ph-nav">
-  <%= link_to "PharmaSage", root_path , class: "navbar-brand pharmasage-title" %>
+  <%= link_to root_path, class: "navbar-brand pharmasage-title" do %>
+  <%= image_tag("https://i.ibb.co/MsmrhWR/Screenshot-34-removebg-preview-1.png", alt: "PharmaSage", style: "width: 205px;") %>
+   <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -24,7 +26,8 @@
            </div>
 
           </div>
-            <a href="#" class="ph-chat-button" style="width: 109.5%"><i class="fa-regular fa-comment-dots"></i> Chat with the Pharmacist</a>
+
+            <a href="<%= pharmacy_chatroom_path(@pharmacy,Chatroom.first.id) %>" class="ph-chat-button" style="width: 109.5%"><i class="fa-regular fa-comment-dots"></i> Chat with the Pharmacist</a>
    </div>
   </div>
 

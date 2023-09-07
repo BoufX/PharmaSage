@@ -26,8 +26,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_06_215223) do
 
   create_table "chatrooms", force: :cascade do |t|
     t.string "name"
+    t.bigint "pharmacy_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["pharmacy_id"], name: "index_chatrooms_on_pharmacy_id"
+    t.index ["user_id"], name: "index_chatrooms_on_user_id"
   end
 
   create_table "medicines", force: :cascade do |t|
@@ -53,10 +57,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_06_215223) do
     t.string "email"
     t.float "longitude"
     t.float "latitude"
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "phone_number"
     t.boolean "status"
+    t.index ["user_id"], name: "index_pharmacies_on_user_id"
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -98,8 +104,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_06_215223) do
 
   add_foreign_key "availabilities", "medicines"
   add_foreign_key "availabilities", "pharmacies"
+  add_foreign_key "chatrooms", "pharmacies"
+  add_foreign_key "chatrooms", "users"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
+  add_foreign_key "pharmacies", "users"
   add_foreign_key "reservations", "medicines"
   add_foreign_key "reservations", "users"
   add_foreign_key "reviews", "pharmacies"
