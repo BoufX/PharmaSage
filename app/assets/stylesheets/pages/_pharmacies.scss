@@ -163,15 +163,15 @@ h1 {
 }
 
 .on-call:hover {
-  background-color: #d3d3d3; 
+  background-color: #d3d3d3;
 }
 
 .open:hover {
-  background-color: #d3d3d3; 
+  background-color: #d3d3d3;
 }
 
 .filter:hover {
-  background-color: #d3d3d3; 
+  background-color: #d3d3d3;
 }
 
 .filter {
@@ -233,19 +233,19 @@ padding-top: 20px;
 
 
 .scroll::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
 
 .scroll::-webkit-scrollbar-thumb {
-    background: rgb(250, 13, 13); 
+    background: rgb(250, 13, 13);
     border-radius: 10px;
     scrollbar-width: thin;
   }
-  
+
 
   .scroll::-webkit-scrollbar-thumb:hover {
-    background: #cf9605; 
+    background: #cf9605;
   }
 
   .mapboxgl-marker path {
@@ -371,9 +371,9 @@ td, th {
 }
 
 th {
-  font-size: 24px; 
+  font-size: 24px;
   text-align: center;
-  padding: 10px; 
+  padding: 10px;
 }
 
 tr:nth-child(even) {
@@ -411,19 +411,19 @@ tr:nth-child(even) {
 .ph-chat-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #4CAF50; 
-  color: #ffffff; 
+  background-color: #4CAF50;
+  color: #ffffff;
   font-size: 18px;
   text-align: center;
   text-decoration: none;
-  border-radius: 0 0 5px 5px; 
+  border-radius: 0 0 5px 5px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .ph-chat-button:hover {
-  background-color: #45a049; 
+  background-color: #45a049;
   color: white;
 }
 
@@ -433,17 +433,17 @@ tr:nth-child(even) {
 }
 
 .review-image {
-  width: 100%; 
-  max-width: 100px; 
-  margin-right: 10px; 
+  width: 100%;
+  max-width: 100px;
+  margin-right: 10px;
 }
 
 .review-details {
-  flex: 1; 
+  flex: 1;
 }
 
 .name-text {
-  font-size: 20px; 
+  font-size: 20px;
   text-align: left !important;
   font-weight: bold;
 }
@@ -589,7 +589,7 @@ label[for="no"] {
   cursor: pointer; /* Change cursor to a hand pointer on hover */
   font-size: 16px; /* Adjust font size as needed */
   margin-right: 1314px;
-  width: 139px;
+  width: 153px;
   height: 47px;
   font-size: 17px;
   margin-bottom: 0px;
@@ -609,5 +609,3 @@ label[for="no"] {
   display: block; /* Makes the anchor a block element */
   text-indent: -9999px; /* Hides any anchor text by moving it off-screen */
 }
-
-
