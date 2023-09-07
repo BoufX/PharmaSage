@@ -1,7 +1,22 @@
-<%= simple_form_for [@pharmacy, @review] do |f| %>
-    <%= f.input :name %>
-    <%= f.input :comment %>
-    <%= f.input :rating%>
-    <%= f.input :post_date%>
-    <%= f.submit "Create Review", class: "btn btn-primary" %>
-  <% end %>
+  <div class="reviews-container">
+  <div class="card" style="box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;">
+    <div class="card-body">
+      <h2 class="reviews-title">Write a Review</h2>
+
+      <%= simple_form_for [@pharmacy, @review] do |f| %>
+        <%= f.error_notification %>
+
+        <div class="reviews-form-inputs">
+          <%= f.input :name %>
+          <%= f.input :comment %>
+           <%= f.input :post_date,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
+        </div>
+        <div class="reviews-form-actions">
+          <%= f.submit "Create Review", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
