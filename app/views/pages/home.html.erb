@@ -90,7 +90,7 @@
         <hr id="line2" style="height:5px; border-width:0; text-align:left; width:100px; margin-left: 10px">
         <li>Get your profile ready.</li>
         <li>Reserve your medicine in one click.</li>
-        <button type="button" class="btn btn-outline-success">Order Now </button>
+      <%= link_to "Reserve Now", pharmacies_path, class: "btn btn-outline-success" %>
       </div>
       <div class="text3">
         <div class="bg-image-3"></div>
@@ -99,7 +99,7 @@
         <li>When you are a member you reserve your medicine easily</li>
         <li>With one click your medicine will be waiting for you at your local pharmacy</li>
         <li>Chat with a pharmacist</li>
-        <button type="button" class="btn btn-outline-success">Get Started </button>
+      <%= link_to "Get Started", pharmacies_path, class: "btn btn-outline-success" %>
       </div>
     </div>
   </div>
@@ -112,13 +112,16 @@
   </div>
 
   <div class="container" id="last-thing">
-    <p><strong>Simplify your pharmacy experience today</strong></p>
+    <h1><strong>Simplify your pharmacy experience today</strong></h1>
     <div class="button-to-join">
     <button class="btn btn-outline-success" >Join Us</button>
   </div>
 
   <div class="phone-info">
-    <p><strong class="join-call">Prefer to join through a phone call?</strong></p>
+    <p class="join-call">Prefer to join through a phone call?</p>
     <p class="speak-to-advisor">Speak to a PharmaSage advisor today.</p>
+        <button class="btn btn-outline-success join-us-ps" >0522 202 092</button>
+
   </div>
+
 </div>

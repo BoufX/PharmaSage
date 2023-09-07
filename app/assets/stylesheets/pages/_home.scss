@@ -101,7 +101,7 @@ background-color: rgb(255, 255, 255)
   margin-left: -174;
 }
 .join-call{
-  margin-left: -15px;
+  margin-left: -24px;
 }
 .speak-to-advisor{
   margin-left: -30px;
@@ -270,16 +270,37 @@ size: 10px;
 
 
 }
-#last-thing p{
+#last-thing p {
   color: #ffffffd1;
   display: flex;
   align-items: center;
-  margin-top: 26px;
+  margin-top: -2px;
   font-family: 'Ibarra Real Nova', serif;
-  font-size: larger;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+#last-thing h1{
+  color: #ffffffd1;
+  display: flex;
+  align-items: center;
+  margin-top: -2px;
+  font-family: 'Ibarra Real Nova', serif;
+  font-size: 45px;
+  margin-right: 5px;
+}
+
+.join-us-ps{
+    margin-top: 1px !important;
+    padding-top: 6px;
+    padding-right: 20px;
+    padding-bottom: 6px;
+    padding-left: 20px;
+    outline-color: #ffffff !important;
+    margin-right: 38px;
 }
 .button-to-join{
-margin-top: -20px !important;
+margin-top: -94px !important;
 padding-top: 10px;
     padding-right: 20px;
     padding-bottom: 30px;
@@ -289,7 +310,7 @@ padding-top: 10px;
 .phone-info {
   margin-left: 50px;
   text-align: center;
-  margin-top: -53px;
+  margin-top: -130px;
 }
 
 /* HEADER & FOOTER */
