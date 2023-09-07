@@ -13,8 +13,8 @@ User.destroy_all
 
 User.create!(email:"bouf@gmail.com", password:"123456")
 
-User.create(email: "sebastien@lewagon.org", nickname: "Sebastien", password: "123456", first_name: "seb", last_name: "tien", admin: true)
-User.create(email: "boris@lewagon.org", nickname: "Boris", password: "123456", first_name: "bo", last_name: "ris", admin: true)
+User.create(email: "sebastien@lewagon.org", nickname: "Pharmacist", password: "123456", first_name: "seb", last_name: "tien", admin: true)
+User.create(email: "boris@lewagon.org", nickname: "User", password: "123456", first_name: "bo", last_name: "ris", admin: true)
 
 puts "Seeding pharmacies"
 
