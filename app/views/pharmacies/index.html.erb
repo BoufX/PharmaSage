@@ -23,19 +23,26 @@
     </div>
         <div class="button-list">
         <div class="two-btns">
-            <button class="button open">Open</button>
-            <button class="button on-call">On-call</button>
+           <form action="/pharmacies" method="GET" style="font-weight:800; font-family:sans-serif" data-controller="filter">
+            <input type="radio" name="rdo" id="open" value="open"   data-action="click->filter#submit" <%= @open ? "checked" : "" %> />
+            <input type="radio" name="rdo" id="all" value="" data-action="click->filter#submit" <%= @open ? "" : "checked" %> />
+         <div class="switch">
+          <label for="open">Open</label>
+          <label for="all">All</label>
+       <span></span>
+     </div>
+</form>
             </div>
         </div>
     <div>
     <div class="pharmacy-list-container scroll" style="max-height: 100vh; overflow-y: auto;">
-     <% @availabilities.each do |availability| %>
-     <a href="<%= pharmacy_path(availability.pharmacy) %>" class="card-product-link">
+     <% @pharmacies.each do |p| %>
+     <a href="<%= pharmacy_path(p) %>" class="card-product-link">
       <div class="card-product">
         <div class="card-product-infos">
-          <h2><%= availability.pharmacy.name %></h2>
-          <p><%= availability.pharmacy.address %></p>
-          <p class="phone-num"><%= availability.pharmacy.phone_number %></p>
+          <h2><%= p.name %></h2>
+          <p><%= p.address %></p>
+          <p class="phone-num"><%= p.phone_number %></p>
         </div>
       </div>
     </a>
