@@ -2,9 +2,10 @@
 <nav class="navbar bg-light">
   <div class="container-fluid">
    <%# <a class="navbar-brand" href="/"> <img src="https://shorturl.at/iIJZ5" alt="Pharmacy-Avatar"> </a> %>
-      <a href="/"><img src="https://i.ibb.co/MsmrhWR/Screenshot-34-removebg-preview-1.png" alt="Screenshot-34-removebg-preview-1" border="0" style="width: 205px;"></a>
+      <a href="/"><img src="https://i.ibb.co/3k8FJ7y/green-logo-2-1.png" alt="green-logo-2-1" border="0" style="width: 208px;"></a>
       <div class="d-flex justify-content-end">
-      <button class="btn btn-success ph-logout-btn" type="submit"> Logout </button>
+      <%# <button class="btn btn-success ph-logout-btn" type="submit"> Logout </button> %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-success ph-logout-btn" %>
     </div>
   </div>
 </nav>
