@@ -1,5 +1,6 @@
-  <div class="reviews-container">
-  <div class="card" style="box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 10px;">
+<div class="login-container">
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div class="card" style="box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2); border-radius: 10px; width: 400px;">
     <div class="card-body">
       <h2 class="reviews-title">Write a Review</h2>
 
@@ -9,12 +10,15 @@
         <div class="reviews-form-inputs">
           <%= f.input :name %>
           <%= f.input :comment %>
-          <%= f.input :rating%>
+          <%= f.input :rating %>
         </div>
-        <div class="reviews-form-actions">
+        <div class="reviews-form-actions" style="display: flex; justify-content: center;">
           <%= f.submit "Create Review", class: "btn btn-primary" %>
         </div>
       <% end %>
     </div>
   </div>
 </div>
+  </div>
+
+

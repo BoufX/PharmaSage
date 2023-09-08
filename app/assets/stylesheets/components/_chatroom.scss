@@ -62,6 +62,7 @@
   .navigation-hero a {
     margin-top: 10px;
     color: #0D4265 !important;
+    margin-right: 20px;
   }
 
   .container.chatroom {
@@ -153,5 +154,11 @@
     justify-content: center;
     font-weight: bold;
     font-size: 16px;
+  }
+
+  .chatroom-bg {
+    background-image: url(Screenshot_47.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
