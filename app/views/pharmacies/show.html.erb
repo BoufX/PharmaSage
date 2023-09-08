@@ -8,8 +8,8 @@
   <div class="collapse navbar-collapse" id="navbarText">
   </div>
   <div class="navbar-text ml-auto">
-    <%# <button class="btn btn-success ph-logout-btn" style="margin-right: 10px; margin-bottom: 10px;" type="submit">Logout</button> %>
-<%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-success ph-logout-btn", style: "margin-right: 10px; margin-bottom: 10px;" %>
+    <button class="btn btn-success ph-logout-btn" style="margin-right: 10px; margin-bottom: 10px;" type="submit">Logout</button>
+    <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
   </div>
 </nav>
 <div class="ph-selected-container ph-selected-bg">
@@ -28,7 +28,7 @@
 
           </div>
 
-            <a href="<%= pharmacy_chatroom_path(@pharmacy,Chatroom.first.id) %>" class="ph-chat-button" style="width: 109.5%"><i class="fa-regular fa-comment-dots"></i> Chat with the Pharmacist</a>
+            <a href="<%= pharmacy_chatroom_path(@pharmacy, Chatroom.first.id) %>" class="ph-chat-button" style="width: 109.5%"><i class="fa-regular fa-comment-dots"></i> Chat with the Pharmacist</a>
    </div>
   </div>
 
