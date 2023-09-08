@@ -72,19 +72,19 @@ h1 {
   }
 
   .card-product h2 {
-    font-size: 27px;
-    font-weight: bold;
+    font-size: 25px;
+    font-weight: 500;
     margin: 0;
-    color: #080a70;
+    color: #000000;
   }
 
   .card-product p {
-    font-size: 16px;
+    font-size: 0.875rem;
     line-height: 1.4;
     opacity: .7;
     margin-bottom: 0;
     margin-top: 8px;
-    color:#0a0b4f
+    color:#202124
   }
 
   .card-product .card-product-infos {
@@ -131,8 +131,7 @@ h1 {
 }
 
 .phone-num {
-  color: green !important;
-  font-weight: bold;
+  color: black !important;
   font-size: 20px;
 }
 
