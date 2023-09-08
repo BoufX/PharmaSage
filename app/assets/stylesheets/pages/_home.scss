@@ -41,16 +41,17 @@ body{
 }
 .h2-head{
   color: #ffffff;
-  margin-left: 23px;
+  margin-left: 50px;
   font-size: 60px;
   font-weight: bold;
   line-height: -0.1;
 }
 .head-text{
   color: #ffffff;
-  margin-left: 25px;
+  margin-left: 50px;
   font-size: 28px;
   line-height: 0.9;
+  margin-right: -40px;
 }
 #line{
 margin-left: -246px;
@@ -101,9 +102,9 @@ background-color: rgb(255, 255, 255)
   margin-left: -174;
 }
 .join-call{
-  margin-left: -24px;
+  margin-left: -23px;
 }
-.speak-to-advisor{
+    .speak-to-advisor{
   margin-left: -30px;
 }
 p{
@@ -139,7 +140,7 @@ margin-top: 30px;
 }
 .btn{
   border-radius: 50px;
-  margin-left: 20px;
+  margin-left: -40px;
   margin-top: 10px;
 }
 
@@ -282,8 +283,6 @@ size: 10px;
 
 #last-thing h1{
   color: #ffffffd1;
-  display: flex;
-  align-items: center;
   margin-top: -2px;
   font-family: 'Ibarra Real Nova', serif;
   font-size: 45px;
@@ -295,17 +294,18 @@ size: 10px;
     padding-top: 6px;
     padding-right: 20px;
     padding-bottom: 6px;
-    padding-left: 20px;
+    padding-left: 22px;
     outline-color: #ffffff !important;
-    margin-right: 38px;
+    margin-left: 23 !important;
 }
 .button-to-join{
 margin-top: -94px !important;
 padding-top: 10px;
-    padding-right: 20px;
+    padding-right: 34px;
     padding-bottom: 30px;
     padding-left: 20px;
     outline-color: #ffffff !important;
+    margin-left: 56px !important;
 }
 .phone-info {
   margin-left: 50px;

@@ -10,9 +10,6 @@
           <%= f.input :name %>
           <%= f.input :comment %>
           <%= f.input :rating%>
-           <%= f.input :post_date,
-            as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
         </div>
         <div class="reviews-form-actions">
           <%= f.submit "Create Review", class: "btn btn-primary" %>
