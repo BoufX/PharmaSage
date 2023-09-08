@@ -8,7 +8,7 @@
   <div class="collapse navbar-collapse" id="navbarText">
   </div>
   <div class="navbar-text ml-auto">
-<%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-success ph-logout-btn", style: "color: white; margin-right: 10px; margin-bottom: 10px;" %>
+<%= link_to "Logout", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-success ph-logout-btn", style: "color: white; margin-right: 10px; margin-bottom: 10px;" %>
   </div>
 </nav>
 
@@ -88,7 +88,7 @@
     <div class="ph-card-info">
       <% @pharmacy.reviews.each do |r| %>
     <div class="card-reviews">
-     <img src="https://i.ibb.co/RPrtrtj/anonymous.png" alt="cat-avatar" class="review-image">
+     <img src="https://i.ibb.co/tx3RChw/avatar-1.png" alt="cat-avatar" class="review-image">
       <div class="review-details">
        <h2 class="name-text"><%= r.name %></h2>
         <div class="card-content" style="display: flex; flex-direction: column;">
