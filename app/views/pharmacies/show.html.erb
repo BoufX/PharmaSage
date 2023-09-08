@@ -8,12 +8,12 @@
   <div class="collapse navbar-collapse" id="navbarText">
   </div>
   <div class="navbar-text ml-auto">
-    <button class="btn btn-success ph-logout-btn" style="margin-right: 10px; margin-bottom: 10px;" type="submit">Logout</button>
-    <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+<%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-success ph-logout-btn", style: "color: white; margin-right: 10px; margin-bottom: 10px;" %>
   </div>
 </nav>
-<div class="ph-selected-container ph-selected-bg">
- <div class="main-card d-flex justify-content-between" style="padding-right: 133px;">
+
+<div class="ph-selected-container chatroom-bg">
+ <div class="main-card d-flex justify-content-between" style="padding-right: 40px;">
  <div class="first-card d-flex justify-content-center" style="width: 45%;">
   <div class="ph-selected-card">
      <div class="card d-flex justify-content-center pharmacy-selected-card">
@@ -88,7 +88,7 @@
     <div class="ph-card-info">
       <% @pharmacy.reviews.each do |r| %>
     <div class="card-reviews">
-     <img src="https://i.ibb.co/9n0KNDW/Profile-Male.png" alt="cat-avatar" class="review-image">
+     <img src="https://i.ibb.co/RPrtrtj/anonymous.png" alt="cat-avatar" class="review-image">
       <div class="review-details">
        <h2 class="name-text"><%= r.name %></h2>
         <div class="card-content" style="display: flex; flex-direction: column;">
