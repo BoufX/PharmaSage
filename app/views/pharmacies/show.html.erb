@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light ph-nav">
   <%= link_to root_path, class: "navbar-brand pharmasage-title" do %>
-  <%= image_tag("https://i.ibb.co/MsmrhWR/Screenshot-34-removebg-preview-1.png", alt: "PharmaSage", style: "width: 205px;") %>
+  <%= image_tag("https://i.ibb.co/3k8FJ7y/green-logo-2-1.png", alt: "PharmaSage", style: "width: 205px;") %>
    <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -8,7 +8,8 @@
   <div class="collapse navbar-collapse" id="navbarText">
   </div>
   <div class="navbar-text ml-auto">
-    <button class="btn btn-success ph-logout-btn" style="margin-right: 10px; margin-bottom: 10px;" type="submit">Logout</button>
+    <%# <button class="btn btn-success ph-logout-btn" style="margin-right: 10px; margin-bottom: 10px;" type="submit">Logout</button> %>
+<%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-success ph-logout-btn", style: "margin-right: 10px; margin-bottom: 10px;" %>
   </div>
 </nav>
 <div class="ph-selected-container ph-selected-bg">
@@ -87,7 +88,7 @@
     <div class="ph-card-info">
       <% @pharmacy.reviews.each do |r| %>
     <div class="card-reviews">
-     <img src="https://i.ibb.co/MRPMmTJ/cat-avatar.png" alt="cat-avatar" class="review-image">
+     <img src="https://i.ibb.co/9n0KNDW/Profile-Male.png" alt="cat-avatar" class="review-image">
       <div class="review-details">
        <h2 class="name-text"><%= r.name %></h2>
         <div class="card-content" style="display: flex; flex-direction: column;">
